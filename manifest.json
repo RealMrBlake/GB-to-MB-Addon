@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "GB to MB Converter",
+    "version": "1.1",
+    "description": "Convert GB to MB via context menu or popup",
+    "permissions": ["contextMenus", "activeTab", "clipboardWrite"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
